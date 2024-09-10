@@ -63,7 +63,7 @@ class AssetsController extends \yii\web\Controller
     public function actionDelete(int $id)
     {
         $asset = $this->findAsset($id);
-        $assetService = $this->getAssetService($asset->type);
+        $assetService = $this->getAssetService($asset);
 
         /** @var AssetsServiceInterface $assetServiceItem */
         $assetServiceItem = new ($assetService->getAssetService());
